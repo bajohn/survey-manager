@@ -1,0 +1,46 @@
+<div class="row">	
+
+	<div class="col col-xs-6" style="height:100%">
+	
+			<table width="100%">
+			<tr width="50%">
+				<td id="footer-label">
+					Language: 
+				</td>
+				<td id="english-button">
+
+					<div>
+						English 
+					</div>
+
+				</td>
+				
+				<td id="arabic-button">
+				
+	
+					<div>
+						عربى 
+					</div>
+		
+				</td>
+			</tr>
+			</table>
+
+	</div>
+</div>
+
+<script>
+$('#arabic-button').click(function(){
+	console.log('arabic button');
+	sessionStorage.setItem('language', 'arabic');
+	hashPageLoad();
+});
+
+$('#english-button').click(function(){
+	console.log('arabic button');
+	sessionStorage.setItem('language', 'english');
+	hashPageLoad();
+
+});
+
+</script>

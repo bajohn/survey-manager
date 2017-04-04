@@ -1,0 +1,18 @@
+Jan 24, 2017 1:36:27 PM fi.iki.elonen.NanoHTTPD$Response send
+SEVERE: Could not send response to the client
+java.net.SocketException: Broken pipe (Write failed)
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at fi.iki.elonen.NanoHTTPD$Response$ChunkedOutputStream.write(NanoHTTPD.java:1369)
+	at fi.iki.elonen.NanoHTTPD$Response$ChunkedOutputStream.write(NanoHTTPD.java:1361)
+	at java.util.zip.GZIPOutputStream.writeHeader(GZIPOutputStream.java:182)
+	at java.util.zip.GZIPOutputStream.<init>(GZIPOutputStream.java:94)
+	at java.util.zip.GZIPOutputStream.<init>(GZIPOutputStream.java:109)
+	at fi.iki.elonen.NanoHTTPD$Response.sendBodyWithCorrectEncoding(NanoHTTPD.java:1589)
+	at fi.iki.elonen.NanoHTTPD$Response.sendBodyWithCorrectTransferAndEncoding(NanoHTTPD.java:1580)
+	at fi.iki.elonen.NanoHTTPD$Response.send(NanoHTTPD.java:1550)
+	at fi.iki.elonen.NanoHTTPD$HTTPSession.execute(NanoHTTPD.java:937)
+	at fi.iki.elonen.NanoHTTPD$ClientHandler.run(NanoHTTPD.java:192)
+	at java.lang.Thread.run(Thread.java:745)
+

@@ -1,0 +1,76 @@
+<div class="header menu-text row">
+	<div class="col col-xs-4" style="height:100%">
+
+		<a href="" > <img id="header-logo" src="/img/jmc_logo_inverted.jpg"; > </a>
+	</div>
+	<div class="col col-xs-8" style="height:100%">
+		<div style="width: 100%; position:absolute; right: 0px; bottom: 0px; top:0px;">
+			<table width="100%">
+			<tr width="100%">
+			
+				<td  id="home-button">
+				
+				<a href="#home"> 
+					<div>
+						Home
+					</div>
+				
+				</a>
+				</td>
+				<td id="profile-button">
+				
+				<a href="#profile"> 
+					<div>
+						Profile 
+					</div>
+				</a>
+				</td>
+				<td  id="find-button">
+				
+				<a href="#find"> 
+					<div>
+						Admin
+					</div>
+				</a>
+				</td>						
+				<td id="logout-button">
+					<a href="#logout"> 
+					<div>
+						Logout 
+					</div>
+
+					</a>
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<script>
+	$( function(){
+		//link routing!
+		$("#header-logo").click(function(e) {
+			loadPageAjax('/homepage');		
+		});
+		
+		$("#logout-button").click(function(e) {
+			sessionStorage.clear();
+			loadPageAjax('/login');
+			loadHeaderAjax('/header');
+		});
+
+		$("#profile-button").click(function(e) {
+			loadPageAjax('/profile');		
+		});
+		
+		$("#home-button").click(function(e) {
+			loadPageAjax('/homepage');		
+		});
+		
+		$("#find-button").click(function(e) {
+			loadPageAjax('/find');		
+			//loadPageAjax('/pages/coming-soon.html');		
+		});	
+	});
+</script>

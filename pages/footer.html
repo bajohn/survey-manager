@@ -1,9 +1,9 @@
 <div class="row">	
 
-	<div class="col col-xs-6" style="height:100%">
+	<div class="col col-xs-12" style="height:100%">
 	
 			<table width="100%">
-			<tr width="50%">
+			<tr>
 				<td id="footer-label">
 					Language: 
 				</td>
@@ -19,7 +19,23 @@
 				
 	
 					<div>
-						عربى 
+						العربية 
+					</div>
+		
+				</td>
+				<td id="spanish-button">
+				
+	
+					<div>
+						Español
+					</div>
+		
+				</td>
+				<td id="french-button">
+				
+	
+					<div>
+						Français
 					</div>
 		
 				</td>
@@ -31,16 +47,25 @@
 
 <script>
 $('#arabic-button').click(function(){
-	console.log('arabic button');
 	sessionStorage.setItem('language', 'arabic');
 	hashPageLoad();
 });
 
 $('#english-button').click(function(){
-	console.log('arabic button');
 	sessionStorage.setItem('language', 'english');
 	hashPageLoad();
 
 });
+$('#french-button').click(function(){
+	sessionStorage.setItem('language', 'french');
+	hashPageLoad();
+
+});
+$('#spanish-button').click(function(){
+	sessionStorage.setItem('language', 'spanish');
+	hashPageLoad();
+
+});
+
 
 </script>

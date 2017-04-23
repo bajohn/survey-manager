@@ -45,13 +45,30 @@ $(document).ready( function() {
 				url: '/survey',
 				method: 'POST',
 				data: userData,
+				contentType: "application/x-www-form-urlencoded; charset=utf-8",
 			}).done(function(resp) {
 			console.log(resp);
 			
 			resp = JSON.parse(resp);
 			if(resp.success=="true")
 			{
-				$('#respBox').text('Your response has been recorded! Filling out the survey again will replace your last set of answers.')
+				if(sessionStorage.getItem('language')=='arabic')
+				{
+					$('#respBox').text('شكرا جزيلا! تحياتنا وسلامنا');
+				}
+				else if(sessionStorage.getItem('language')=='french')
+				{
+					$('#respBox').text('Merci!  Très amicalement.');
+				}
+				else if(sessionStorage.getItem('language')=='spanish')
+				{
+					$('#respBox').text('¡Gracias!');
+				}
+				else
+				{
+					$('#respBox').text('Your response has been recorded! Filling out the survey again will replace your last set of answers.');
+				}
+
 			}
 			else
 			{

@@ -131,6 +131,9 @@ function hashPageLoad()
 		{
 			loadPageAjax('/join');
 		}
+		loadFooterAjax();
+		loadHeaderAjax('/header');
+		
 }
 
 var initialLoad = false;
@@ -141,8 +144,7 @@ $(document).ready( function() {
 	if(!initialLoad)
 	{
 		
-		loadHeaderAjax('/header');
-		loadFooterAjax();
+		//loadHeaderAjax('/header');
 		hashPageLoad();
 
 		initialLoad = true;
